@@ -9,11 +9,11 @@ public class Main {
         toDoList.add(task);
     }
 
-    public void markTaskAsDone(String task) {
+    public void marcarFeito(String task) {
         toDoList.remove(task);
     }
 
-    public void listTasks() {
+    public void listarTasks() {
         for (String task : toDoList) {
             System.out.println(task);
         }
@@ -29,10 +29,10 @@ public class Main {
             System.out.println("3. Listar tarefas");
             System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
-            int option = scanner.nextInt();
+            int opcao = scanner.nextInt();
             scanner.nextLine();
 
-            switch (option) {
+            switch (opcao) {
                 case 1:
                     System.out.print("Digite a tarefa: ");
                     String task = scanner.nextLine();
@@ -41,10 +41,10 @@ public class Main {
                 case 2:
                     System.out.print("Digite a tarefa concluída: ");
                     task = scanner.nextLine();
-                    toDoList.markTaskAsDone(task);
+                    toDoList.marcarFeito(task);
                     break;
                 case 3:
-                    toDoList.listTasks();
+                    toDoList.listarTasks();
                     break;
                 case 4:
                     System.exit(0);
